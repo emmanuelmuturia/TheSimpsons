@@ -1,6 +1,7 @@
 package com.example.thesimpsons.uilayer
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -52,17 +53,20 @@ fun SuccessCard(theSimpsons: TheSimpsons) {
 
             Spacer(modifier = Modifier.width(7.dp))
 
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+            Box(
+                modifier = Modifier.fillMaxSize()
             ) {
-                Text(text = "Name: ${theSimpsons.character}")
-                Spacer(modifier = Modifier.height(3.dp))
-                Text(text = "Character Direction: ${theSimpsons.characterDirection}")
-                Spacer(modifier = Modifier.height(3.dp))
-                Text(text = "Quote: ${theSimpsons.quote}")
-                Spacer(modifier = Modifier.height(3.dp))
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Text(text = "Name: ${theSimpsons.character}")
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text = "Character Direction: ${theSimpsons.characterDirection}")
+                    Spacer(modifier = Modifier.height(3.dp))
+                    Text(text = "Quote: ${theSimpsons.quote}")
+                    Spacer(modifier = Modifier.height(3.dp))
+                }
             }
 
         }
