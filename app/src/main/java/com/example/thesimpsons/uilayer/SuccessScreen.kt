@@ -58,8 +58,7 @@ fun SuccessCard(theSimpsons: TheSimpsons) {
                 modifier = Modifier.fillMaxSize()
             ) {
                 Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
+
                 ) {
                     Text(text = "Name: ${theSimpsons.character}", textAlign = TextAlign.Start)
                     Spacer(modifier = Modifier.height(3.dp))

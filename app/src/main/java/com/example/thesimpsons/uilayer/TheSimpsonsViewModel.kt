@@ -28,7 +28,7 @@ class TheSimpsonsViewModel @Inject constructor(application: Application) : Andro
         getTheSimpsonsQuotes()
     }
 
-    private fun getTheSimpsonsQuotes() {
+    fun getTheSimpsonsQuotes() {
         viewModelScope.launch {
 
             _theSimpsonsState.update { TheSimpsonsState.Loading }
