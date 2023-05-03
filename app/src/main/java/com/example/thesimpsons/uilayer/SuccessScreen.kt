@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
@@ -60,11 +61,11 @@ fun SuccessCard(theSimpsons: TheSimpsons) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
-                    Text(text = "Name: ${theSimpsons.character}")
+                    Text(text = "Name: ${theSimpsons.character}", textAlign = TextAlign.Start)
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text = "Character Direction: ${theSimpsons.characterDirection}")
+                    Text(text = "Character Direction: ${theSimpsons.characterDirection}", textAlign = TextAlign.Start)
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text = "Quote: ${theSimpsons.quote}")
+                    Text(text = "Quote: ${theSimpsons.quote}", textAlign = TextAlign.Start)
                     Spacer(modifier = Modifier.height(3.dp))
                 }
             }
