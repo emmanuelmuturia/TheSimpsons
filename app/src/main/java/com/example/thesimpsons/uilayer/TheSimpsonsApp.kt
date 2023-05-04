@@ -44,7 +44,7 @@ fun TheSimpsonsApp(theSimpsonsViewModel: TheSimpsonsViewModel = hiltViewModel())
         modifier = Modifier.fillMaxSize(),
         topBar = { TheSimpsonsAppBar() },
         floatingActionButton = {
-            FloatingActionButton(onClick = { theSimpsonsViewModel.getTheSimpsonsQuotes() }) {
+            FloatingActionButton(onClick = { theSimpsonsViewModel.getTheSimpsonsQuotes() }, containerColor = Color.Yellow) {
                 Icon(imageVector = Icons.Rounded.Refresh, contentDescription = "Refresh")
             }
         }

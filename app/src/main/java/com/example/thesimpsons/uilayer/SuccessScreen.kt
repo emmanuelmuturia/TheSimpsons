@@ -18,8 +18,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
@@ -60,11 +65,32 @@ fun SuccessCard(theSimpsons: TheSimpsons) {
                 Column(
 
                 ) {
-                    Text(text = "Name: ${theSimpsons.character}", textAlign = TextAlign.Start)
+                    Text(text =
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
+                            append(text = "Name: ")
+                        }
+                        append(text = theSimpsons.character)
+                    }
+                    )
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text = "Character Direction: ${theSimpsons.characterDirection}", textAlign = TextAlign.Start)
+                    Text(text =
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
+                            append(text = "Character Direction: ")
+                        }
+                        append(text = theSimpsons.characterDirection)
+                    }
+                    )
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text = "Quote: ${theSimpsons.quote}", textAlign = TextAlign.Start)
+                    Text(text =
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.ExtraBold, color = Color.White)) {
+                            append(text = "Quote: ")
+                        }
+                        append(text = theSimpsons.quote)
+                    }
+                    )
                     Spacer(modifier = Modifier.height(3.dp))
                 }
             }
