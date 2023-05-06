@@ -4,4 +4,5 @@ class TheSimpsonsRepositoryImpl(private val theSimpsonsApiService: TheSimpsonsAp
     override suspend fun getTheSimpsonsQuotes(): List<TheSimpsons> {
         return theSimpsonsApiService.getTheSimpsons()
     }
+
 }

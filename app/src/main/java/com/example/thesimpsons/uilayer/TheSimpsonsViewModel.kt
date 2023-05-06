@@ -20,6 +20,7 @@ class TheSimpsonsViewModel @Inject constructor(application: Application) : Andro
     private var _theSimpsonsState = MutableStateFlow<TheSimpsonsState>(TheSimpsonsState.Loading)
     val theSimpsonsState: StateFlow<TheSimpsonsState> = _theSimpsonsState.asStateFlow()
 
+
     private val retrofit = TheSimpsonsModule.providesRetrofit()
     private val apiService = TheSimpsonsModule.providesApiService(retrofit = retrofit)
     private val repository = TheSimpsonsModule.providesTheSimpsonsRepository(theSimpsonsApiService = apiService)
